@@ -16,8 +16,7 @@ import { useNavigate } from "../../router"
 import PageTitle from "../../common/PageTitle"
 import AppLoader from "../../common/AppLoader"
 import { formatDate } from "../../utils/monthNames"
-import { useAppDispatch, useAppSelector } from "../../app/hooks"
-import { setSortConfig } from "../../app/slices/sort"
+import { useAppSelector } from "../../app/hooks"
 import SortableHeaderCell from "../../common/SortableHeaderCell"
 
 export const Loader = () => "Route loader"
@@ -27,7 +26,6 @@ export const Catch = () => <div>Something went wrong...</div>
 export const Pending = () => <div>Loading...</div>
 
 const StarWarsFilms: FC = () => {
-  const dispatch = useAppDispatch()
   const sortConfig = useAppSelector((state) => state.sort)
 
   const navigate = useNavigate()
@@ -88,7 +86,7 @@ const StarWarsFilms: FC = () => {
                     icon={<ArrowForwardIcon w={5} h={5} />}
                   />
                 </Td>
-                <Td>{formatDate(film.release_date)}</Td>
+                <Td>{formatDate(film.release_date || "")}</Td>
                 <Td>{film.episode_id}</Td>
                 <Td>{film.director}</Td>
                 <Td>

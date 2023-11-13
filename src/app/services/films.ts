@@ -10,13 +10,6 @@ interface FilmsResponse {
   results: Array<FilmModel>
 }
 
-interface FilmResponse {
-  count: number
-  next: string | null
-  previous: string | null
-  results: FilmModel
-}
-
 export const filmsApi = api.injectEndpoints({
   endpoints: (build) => ({
     getFilms: build.query<FilmsResponse, void>({
@@ -28,7 +21,7 @@ export const filmsApi = api.injectEndpoints({
           ...response,
           results: response.results.map((film) => ({
             ...film,
-            id: Number(film.url.split("/").filter(Boolean).pop()),
+            id: Number((film.url || "").split("/").filter(Boolean).pop()),
           })),
         }
       },

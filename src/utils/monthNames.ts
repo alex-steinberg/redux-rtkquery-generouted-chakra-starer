@@ -15,7 +15,7 @@ const MONTH_NAMES = [
 
 export function formatDate(date: string): string {
   if (!date) {
-    throw new Error("Missing required parameter")
+    return ""
   }
 
   const [year, month, day] = date.split("-")
@@ -27,7 +27,7 @@ export function formatDate(date: string): string {
     parseInt(month) < 1 ||
     parseInt(month) > 12
   ) {
-    throw new Error("Parameter format must be YYYY-MM-DD")
+    return ""
   }
   return `${MONTH_NAMES[Number(month) - 1]} ${day}, ${year}`
 }

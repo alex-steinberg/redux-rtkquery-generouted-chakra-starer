@@ -1,6 +1,6 @@
+import { Outlet } from "react-router-dom"
 import "../App.css"
 import AppContainer from "../common/AppContainer"
-import { Outlet } from "react-router-dom"
 
 function App() {
   return (
