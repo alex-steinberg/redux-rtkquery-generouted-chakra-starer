@@ -6,12 +6,12 @@ Requires Node.js 18+
 
 Clone the repository, then run:
 
-    ```bash
-    git clone <url> your-app
-    cd your-app
-    npm install
-    npm start
-    ```
+```bash
+git clone <url> your-app
+cd your-app
+npm install
+npm start
+```
 
 ## Features
 
