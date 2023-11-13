@@ -1,27 +1,27 @@
-# vite-template-redux
+# Modern redux starter app
 
-Uses [Vite](https://vitejs.dev/), [Vitest](https://vitest.dev/), and [React Testing Library](https://github.com/testing-library/react-testing-library) to create a modern [React](https://react.dev/) app compatible with [Create React App](https://create-react-app.dev/)
+## Installation & Usage
 
-```sh
-npx degit reduxjs/redux-templates/packages/vite-template-redux my-app
-```
+Requires Node.js 18+
 
-## Goals
+Clone the repository, then run:
 
-- Easy migration from Create React App or Vite
-- As beginner friendly as Create React App
-- Optimized performance compared to Create React App
-- Customizable without ejecting
+    ```bash
+    git clone <url> your-app
+    cd your-app
+    npm install
+    npm start
+    ```
 
-## Scripts
+## Features
 
-- `dev`/`start` - start dev server and open browser
-- `build` - build for production
-- `preview` - locally preview production build
-- `test` - launch test runner
+- Modern redux with redux toolkit and RTK query
+- Generouted for file-based routing without the heft of NextJS
+- Vite
+- Vitest with RTL for a Jest-like testing experience, but better
+- ChakraUI for UI components and design system
 
-## Inspiration
+## Credit
 
-- [Create React App](https://github.com/facebook/create-react-app/tree/main/packages/cra-template)
-- [Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react)
-- [Vitest](https://github.com/vitest-dev/vitest/tree/main/examples/react-testing-lib)
+Thanks for the things https://github.com/finmavis/swapi-task
+

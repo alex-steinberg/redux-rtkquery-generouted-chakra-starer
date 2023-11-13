@@ -28,3 +28,7 @@ build
 
 # Miscellaneous
 *.local
+
+#IDEs
+.vscode
+.idea
