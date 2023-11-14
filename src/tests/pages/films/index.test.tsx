@@ -20,6 +20,6 @@ test("films route works", async () => {
       <StarWarsFilms />
     </Provider>,
   )
-  const header = await screen.findByText(/Films/i)
-  expect(header).toBeInTheDocument()
+  const filmTitle = await screen.findByText(/A New Hope/i)
+  expect(filmTitle).toBeInTheDocument()
 })
